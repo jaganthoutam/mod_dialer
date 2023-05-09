@@ -121,7 +121,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="mod_skel.c" />
+    <ClCompile Include="mod_dialer.c" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\w32\Library\FreeSwitchCore.2015.vcxproj">
