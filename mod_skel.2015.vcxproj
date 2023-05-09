@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectName>mod_skel</ProjectName>
+    <ProjectName>mod_dialer</ProjectName>
     <ProjectGuid>{11C9BC3D-45E9-46E3-BE84-B8CEE4685E39}</ProjectGuid>
-    <RootNamespace>mod_skel</RootNamespace>
+    <RootNamespace>mod_dialer</RootNamespace>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
