@@ -1,6 +1,18 @@
 # mod_dialer
 freeSWITCH mod_dialer
 
+```
+  cd cd /usr/src/freeswitch/src/mod/applications
+  git clone https://github.com/jaganthoutam/mod_dialer.git
+  cd mod_dialer
+  gcc -shared -o mod_dialer.so -fPIC mod_dialer.c  -std=c99
+  cp mod_dialer.so /usr/lib/freeswitch/mod/mod_dialer.so
+  fs_cli 
+  # Reload the mod_dialer
+  reload mod_dialer
+
+```
+
 I had a need to make mass-calls and when connected, send them to an IVR, message or whatever.
 I couldn't find any suitable solution out there, so i created this freeSWITCH module.
 
