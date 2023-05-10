@@ -5,6 +5,8 @@ freeSWITCH mod_dialer
   cd /usr/src/freeswitch/src/mod/applications
   git clone https://github.com/jaganthoutam/mod_dialer.git
   cd mod_dialer
+  export C_INCLUDE_PATH="/usr/include/freeswitch/"
+  export CPLUS_INCLUDE_PATH="/usr/include/freeswitch/"
   gcc -shared -o mod_dialer.so -fPIC mod_dialer.c  -std=c99
   cp mod_dialer.so /usr/lib/freeswitch/mod/mod_dialer.so
   fs_cli 
