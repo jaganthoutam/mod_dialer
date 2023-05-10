@@ -139,15 +139,14 @@ SWITCH_MODULE_LOAD_FUNCTION(mod_dialer_load);
 
 char destinations_sql[512];
 char destinations_sql_format[] = "CREATE TABLE %s (\n"
-                                 "   number	     VARCHAR(30) NOT NULL  PRIMARY KEY,\n"
-                                 "   lastcall	     DATETIME,\n"
+                                 "   number          VARCHAR(30) NOT NULL  PRIMARY KEY,\n"
+                                 "   lastcall        timestamp,\n"
                                  "   lastresult     VARCHAR(30),\n"
-                                 "   calls	     INT,\n"
-                                 "   in_use		 INT,\n"
+                                 "   calls           INT,\n"
+                                 "   in_use              INT,\n"
                                  "   duration    INT,\n"
-                                 "   callerid    VARCHAR(25) NULL DEFAULT NULL,\n"
-                                 "INDEX by_last_called (lastcall)\n"
-                                 ") Engine=MyISAM ;\n";
+                                 "   callerid    VARCHAR(25) NULL DEFAULT NULL\n"
+                                 ");\n";
 
 char destinations_check_sql[100];
 char destinations_check_format[] = "select count(*) from %s;";
