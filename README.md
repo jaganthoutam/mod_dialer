@@ -2,7 +2,7 @@
 freeSWITCH mod_dialer
 
 ```
-  cd cd /usr/src/freeswitch/src/mod/applications
+  cd /usr/src/freeswitch/src/mod/applications
   git clone https://github.com/jaganthoutam/mod_dialer.git
   cd mod_dialer
   gcc -shared -o mod_dialer.so -fPIC mod_dialer.c  -std=c99
