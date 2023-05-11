@@ -395,8 +395,8 @@ static void *SWITCH_THREAD_FUNC dialer_start_campaign(switch_thread_t *thread, v
         switch_log_printf( SWITCH_CHANNEL_LOG, SWITCH_LOG_CRIT, "dialer: Cannot open DB!\n" );
         goto end;
     }
-
-    sprintf(sql, "select * from %s where in_use = 0 and calls < %s and (( EXTRACT(EPOCH FROM (lastcall - now() ))/60 > %s  or lastcall is NULL ) or lastcall is NULL ) ORDER BY RANDOM () LIMIT 1", job->destination_list, job->attempts_per_number, job->time_between_retries );
+	
+    sprintf(sql, "select * from %s where in_use = 0 and calls < %d and ( EXTRACT(EPOCH FROM (lastcall - now() ))/60 > %d  or lastcall is NULL ) order by RANDOM() LIMIT 1", job->destination_list, job->attempts_per_number, job->time_between_retries );
     switch_log_printf( SWITCH_CHANNEL_LOG, SWITCH_LOG_INFO, "dialer: SQL: %s\n", sql );
     switch_mutex_unlock(globals.mutex);
     switch_log_printf( SWITCH_CHANNEL_LOG, SWITCH_LOG_INFO, "dialer: UN-LOCKING globals.mutex\n");
